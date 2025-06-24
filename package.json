@@ -1,0 +1,42 @@
+{
+  "name": "@yourorg/mcp-pushover",
+  "version": "1.0.0",
+  "description": "MCP server for sending push notifications via Pushover",
+  "main": "dist/main.js",
+  "bin": {
+    "mcp-pushover": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts",
+    "test": "vitest",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": ["mcp", "pushover", "notifications", "ai", "claude"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourorg/mcp-pushover.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.1",
+    "axios": "^1.10.0",
+    "dotenv": "^16.5.0",
+    "p-retry": "^6.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.67",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "vitest": "^3.2.4"
+  }
+}
