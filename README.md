@@ -158,33 +158,6 @@ High-priority alerts that require immediate attention:
 
 Simply ask Claude: *"Send me a push notification that says 'Deploy completed successfully'"* and you'll receive it instantly on your mobile device!
 
-## Development
-
-### Setup
-```bash
-npm install
-npm run build
-```
-
-### Run in Development Mode
-```bash
-npm run dev
-```
-
-### Testing
-```bash
-npm test
-```
-
-### Manual Testing
-```bash
-# Build first
-npm run build
-
-# Run the test script
-node test/manual-test.js
-```
-
 ## Security
 
 - API tokens are never logged
