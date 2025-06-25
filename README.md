@@ -1,6 +1,6 @@
 # MCP-Pushover Bridge
 
-A Model Context Protocol (MCP) server that enables AI assistants to send push notifications via Pushover.
+A Model Context Protocol (MCP) server that enables AI assistants to send push notifications via Pushover. Perfect for getting instant mobile alerts when Claude completes tasks, encounters errors, or when you want to send yourself messages through your AI assistant.
 
 ## Features
 
@@ -127,6 +127,36 @@ Send a notification via Pushover to your mobile device.
   "sound": "magic"
 }
 ```
+
+## Use Cases
+
+### Personal Messaging
+Ask Claude to send yourself reminders or messages:
+- *"Send me a notification to call mom at 5 PM"*
+- *"Remind me to check the server logs"* 
+- *"Send a message saying the backup is complete"*
+
+### Task Completion Alerts
+Get notified when Claude finishes work:
+- *"Let me know when you're done analyzing this data"*
+- *"Send me a notification when the report is ready"*
+- *"Alert me if you find any errors in the code"*
+
+### Workflow Integration
+Integrate with your daily routines:
+- Morning briefings and daily summaries
+- Build completion and deployment notifications
+- Error monitoring and system alerts
+- Meeting reminders and calendar notifications
+
+### Emergency Notifications
+High-priority alerts that require immediate attention:
+- System failures or critical errors
+- Security alerts or unusual activity
+- Time-sensitive reminders
+- Urgent task completions
+
+Simply ask Claude: *"Send me a push notification that says 'Deploy completed successfully'"* and you'll receive it instantly on your mobile device!
 
 ## Development
 
