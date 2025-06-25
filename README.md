@@ -39,15 +39,20 @@ Before using this MCP server, you need to set up Pushover:
 
 ### 1. Create Pushover Account
 1. Sign up at [pushover.net](https://pushover.net/)
-2. Download the Pushover app on your mobile device
-3. Note your **User Key** from the dashboard
+2. Note your **User Key** from the dashboard
 
-### 2. Create Application
+### 2. Download Pushover App
+1. Install the Pushover app on your mobile device:
+   - **iOS**: Download from [App Store](https://apps.apple.com/us/app/pushover-notifications/id506088175)
+   - **Android**: Download from [Google Play](https://play.google.com/store/apps/details?id=net.superblock.pushover)
+2. Log in with your Pushover account credentials
+
+### 3. Create Application
 1. Go to [pushover.net/apps/build](https://pushover.net/apps/build)
 2. Create a new application (e.g., "MCP Bridge")
 3. Note your **API Token/Key**
 
-### 3. Test Your Setup
+### 4. Test Your Setup
 You can test your credentials using curl:
 ```bash
 curl -s \
