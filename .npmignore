@@ -1,0 +1,57 @@
+# Source files
+src/
+*.ts
+!dist/**/*.d.ts
+
+# Configuration files
+.env
+.env.*
+tsconfig.json
+vitest.config.ts
+.eslintrc.*
+.prettierrc
+
+# Test files
+test/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+__tests__/
+
+# Development files
+*.log
+node_modules/
+.git/
+.gitignore
+.github/
+
+# Build artifacts
+*.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation source files
+docs/
+*.md
+!README.md
+
+# Example and demo files
+examples/
+claude-desktop-config*.json
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Mac
+.DS_Store
+
+# Temporary files
+tmp/
+temp/

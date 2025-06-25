@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "pushover": {
+      "command": "node",
+      "args": ["/Users/pyang/git/mcp-pushover/dist/main.js"],
+      "env": {
+        "PUSHOVER_DEFAULT_TOKEN": "your_actual_token_here",
+        "PUSHOVER_DEFAULT_USER": "your_actual_user_key_here"
+      }
+    }
+  }
+}

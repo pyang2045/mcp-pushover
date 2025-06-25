@@ -1,5 +1,5 @@
 {
-  "name": "@yourorg/mcp-pushover",
+  "name": "mcp-pushover",
   "version": "1.0.0",
   "description": "MCP server for sending push notifications via Pushover",
   "main": "dist/main.js",
@@ -19,11 +19,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourorg/mcp-pushover.git"
+    "url": "https://github.com/pyang2045/mcp-pushover.git"
   },
+  "bugs": {
+    "url": "https://github.com/pyang2045/mcp-pushover/issues"
+  },
+  "homepage": "https://github.com/pyang2045/mcp-pushover#readme",
   "engines": {
     "node": ">=18.0.0"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "type": "commonjs",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.13.1",

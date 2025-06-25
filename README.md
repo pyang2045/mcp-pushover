@@ -14,18 +14,18 @@ A Model Context Protocol (MCP) server that enables AI assistants to send push no
 
 ### Quick Start (Recommended)
 ```bash
-npx @yourorg/mcp-pushover
+npx mcp-pushover
 ```
 
 ### Global Installation
 ```bash
-npm install -g @yourorg/mcp-pushover
+npm install -g mcp-pushover
 mcp-pushover
 ```
 
 ### From Source
 ```bash
-git clone https://github.com/yourorg/mcp-pushover.git
+git clone https://github.com/pyang2045/mcp-pushover.git
 cd mcp-pushover
 npm install
 npm run build
@@ -62,7 +62,7 @@ Add to your Claude configuration file:
   "mcpServers": {
     "pushover": {
       "command": "npx",
-      "args": ["@yourorg/mcp-pushover"],
+      "args": ["mcp-pushover"],
       "env": {
         "PUSHOVER_DEFAULT_TOKEN": "your_token",
         "PUSHOVER_DEFAULT_USER": "your_user"
