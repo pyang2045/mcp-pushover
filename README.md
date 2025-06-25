@@ -4,11 +4,12 @@ A Model Context Protocol (MCP) server that enables AI assistants to send push no
 
 ## Features
 
-- Send push notifications through Pushover API
-- Configurable retry logic with exponential backoff
-- Support for all Pushover message parameters (title, priority, sound)
-- Environment-based configuration
-- Full TypeScript support
+- 📱 Send push notifications through Pushover API
+- 🔄 Configurable retry logic with exponential backoff
+- 🎛️ Support for all Pushover message parameters (title, priority, sound)
+- ⚙️ Environment-based configuration
+- 🔷 Full TypeScript support
+- 🤖 Built for Claude Desktop and MCP-compatible clients
 
 ## Installation
 
@@ -32,6 +33,30 @@ npm run build
 npm start
 ```
 
+## Pushover Setup
+
+Before using this MCP server, you need to set up Pushover:
+
+### 1. Create Pushover Account
+1. Sign up at [pushover.net](https://pushover.net/)
+2. Download the Pushover app on your mobile device
+3. Note your **User Key** from the dashboard
+
+### 2. Create Application
+1. Go to [pushover.net/apps/build](https://pushover.net/apps/build)
+2. Create a new application (e.g., "MCP Bridge")
+3. Note your **API Token/Key**
+
+### 3. Test Your Setup
+You can test your credentials using curl:
+```bash
+curl -s \
+  --form-string "token=YOUR_API_TOKEN" \
+  --form-string "user=YOUR_USER_KEY" \
+  --form-string "message=Test from MCP-Pushover" \
+  https://api.pushover.net/1/messages.json
+```
+
 ## Configuration
 
 ### Environment Variables
@@ -52,9 +77,9 @@ RETRY_INITIAL_DELAY=1000
 
 ### Claude Desktop Integration
 
-Add to your Claude configuration file:
+Add to your Claude Desktop configuration file:
 
-**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`  
 **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
 
 ```json
@@ -64,34 +89,42 @@ Add to your Claude configuration file:
       "command": "npx",
       "args": ["mcp-pushover"],
       "env": {
-        "PUSHOVER_DEFAULT_TOKEN": "your_token",
-        "PUSHOVER_DEFAULT_USER": "your_user"
+        "PUSHOVER_DEFAULT_TOKEN": "your_app_api_token",
+        "PUSHOVER_DEFAULT_USER": "your_user_key"
       }
     }
   }
 }
 ```
 
+After updating the configuration, restart Claude Desktop to load the MCP server.
+
 ## Available Tools
 
 ### pushover_send_message
 
-Send a notification via Pushover.
+Send a notification via Pushover to your mobile device.
 
 **Parameters:**
 - `message` (required): The message content to send
 - `user_key` (optional): Pushover user or group key (defaults to env var)
 - `api_token` (optional): Pushover application API token (defaults to env var)
 - `title` (optional): Message title
-- `priority` (optional): Message priority (-2 to 2)
-- `sound` (optional): Notification sound name
+- `priority` (optional): Message priority:
+  - `-2`: No notification/alert
+  - `-1`: Quiet notification
+  - `0`: Normal priority (default)
+  - `1`: High priority
+  - `2`: Emergency priority (requires acknowledgment)
+- `sound` (optional): Notification sound (pushover, bike, bugle, cashregister, classical, cosmic, falling, gamelan, incoming, intermission, magic, mechanical, pianobar, siren, spacealarm, tugboat, alien, climb, persistent, echo, updown, vibrate, none)
 
 **Example:**
 ```json
 {
-  "message": "Hello from MCP!",
-  "title": "Test Notification",
-  "priority": 0
+  "message": "Task completed successfully!",
+  "title": "Claude Notification",
+  "priority": 1,
+  "sound": "magic"
 }
 ```
 
